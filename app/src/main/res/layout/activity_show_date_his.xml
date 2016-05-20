@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.calandburn.ShowDateHisActivity"
+    android:background="@drawable/bg4">
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000" />
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageButton18"
+        android:background="@drawable/banner2"
+        android:onClick="backMainMenu" />
+
+    <RelativeLayout
+        tools:context="com.example.eve.myapplication.DetaildayActivity"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageView25">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textView87"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/h1"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_margin="10dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView87"
+            android:id="@+id/head"
+            android:background="@color/brown">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/re_listactivity"
+                android:id="@+id/textView41"
+                android:layout_weight="2.8"
+                android:textStyle="bold|italic"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/re_time"
+                android:id="@+id/textView45"
+                android:layout_weight="0.8"
+                android:textStyle="bold|italic"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/re_cal"
+                android:id="@+id/textView90"
+                android:layout_weight="0.7"
+                android:textStyle="bold|italic"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="right"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView9"
+            android:background="#32ffffff"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textView88"
+            android:textSize="@dimen/h1"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/listView9"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ClickBackShowDateHisActivity"
+            android:text="@string/back"
+            android:id="@+id/button4"
+            android:layout_alignParentBottom="true"
+            android:background="@color/green_apple"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</RelativeLayout>

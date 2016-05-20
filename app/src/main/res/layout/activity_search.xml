@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.calandburn.SearchActivity"
+    android:background="@drawable/bg4">
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView19"
+        android:onClick="backToMainMenuFromSearchActivity"
+        android:background="@drawable/banner2" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageView18">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageButton7"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/search"
+            android:onClick="clickToSearchNameActivity" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_nameactivity"
+            android:id="@+id/textView71"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/h3"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/search_type"
+            android:id="@+id/textView83"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/h1"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageButton8"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/burn1"
+            android:layout_marginTop="20dp"
+            android:onClick="clickToSearchExercise" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_exercise"
+            android:id="@+id/textView72"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/h3"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageButton9"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/burn2"
+            android:layout_marginTop="20dp"
+            android:onClick="clickToSearchActivity" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_activity"
+            android:id="@+id/textView73"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/h3"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.calandburn.ShowDateHisFood"
+    android:background="@drawable/bg4">
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000" />
+
+    <RelativeLayout
+        tools:context="com.example.eve.myapplication.DetaildayActivity"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageView26">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textView70"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/h1"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_margin="10dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView70"
+            android:id="@+id/head"
+            android:background="@color/brown">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/re_listfood"
+                android:id="@+id/textView91"
+                android:layout_weight="2.6"
+                android:textStyle="bold|italic"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/re_num"
+                android:id="@+id/textView92"
+                android:layout_weight="0.7"
+                android:textStyle="bold|italic"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/re_cal"
+                android:id="@+id/textView93"
+                android:layout_weight="0.7"
+                android:textStyle="bold|italic"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="right"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView5"
+            android:background="#32ffffff"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textView77"
+            android:textSize="@dimen/h1"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/listView5"
+            android:textColor="@color/black"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ClickBackShowDateHisFood"
+            android:text="@string/back"
+            android:id="@+id/button8"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/h2"
+            android:background="@color/green_apple" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageButton19"
+        android:background="@drawable/banner2"
+        android:onClick="backMainMenu" />
+</RelativeLayout>

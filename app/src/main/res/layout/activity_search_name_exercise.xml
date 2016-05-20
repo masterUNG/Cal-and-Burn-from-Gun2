@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.calandburn.SearchNameActivity"
+    android:background="@drawable/bg4">
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView21"
+        android:onClick="backMainMenuFromSearchNameActivity"
+        android:background="@drawable/banner2" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView7"
+        android:layout_below="@+id/editText12"
+        android:layout_margin="5dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText12"
+        android:hint="@string/search_nameactivity"
+        android:layout_below="@+id/imageView20"
+        android:layout_margin="20dp" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageButton11"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/reporttop"
+        android:onClick="clickToReportFromSearchNameActivity" />
+</RelativeLayout>

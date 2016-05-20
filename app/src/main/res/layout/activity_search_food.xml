@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.calandburn.SearchFood"
+    android:background="@drawable/bg4">
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView15"
+        android:onClick="backToMainMenuFromSearchFood"
+        android:background="@drawable/banner2" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView14">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageButton10"
+            android:background="@drawable/search"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:onClick="clickToSearchNameFood" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_namefood"
+            android:id="@+id/textView78"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/h3"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/search_type"
+            android:id="@+id/textView82"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textSize="@dimen/h1"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:background="@color/white"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageButton2"
+            android:background="@drawable/food1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:onClick="clickToFood" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/searchfood"
+            android:id="@+id/textView79"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/h3"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageButton3"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/cake"
+            android:onClick="clickToCake" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_dessert"
+            android:id="@+id/textView80"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/h3"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageButton4"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/drink"
+            android:onClick="clickToDrink" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_drink"
+            android:id="@+id/textView81"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/h3"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,416 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.calandburn.ReportActivity"
+    android:background="@drawable/bg4">
+
+    <ImageView
+        android:id="@+id/banner2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:onClick="backMainMenuFromReport"
+        android:layout_height="50dp"
+        android:src="@drawable/banner2" />
+    <LinearLayout
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/banner2"
+        android:orientation="horizontal"
+        android:background="@color/brown">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/list_to_day"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView25"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_weight="1"
+            android:text="####/##/##" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/profile"
+        android:padding="10dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/imvFace"
+                android:layout_margin="5dp"
+                android:src="@drawable/profile" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/get"
+                        android:id="@+id/textView28"
+                        android:textSize="25sp"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="italic"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Text"
+                        android:id="@+id/textView35"
+                        android:textSize="25sp"
+                        android:layout_marginRight="8dp"
+                        android:textStyle="bold|italic"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cal"
+                        android:id="@+id/textView38"
+                        android:layout_marginRight="5dp"
+                        android:textSize="20sp"
+                        android:textStyle="italic"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/requires"
+                        android:id="@+id/textView37"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Text"
+                        android:id="@+id/textView29"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Calorie"
+                        android:id="@+id/textView36"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/eat"
+                android:id="@+id/textView32"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold|italic"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/burn"
+                android:id="@+id/textView33"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView26"
+                android:textSize="@dimen/h2"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold|italic"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView27"
+                android:textSize="@dimen/h2"
+                android:layout_weight="1"
+                android:allowUndo="false"
+                android:textStyle="bold|italic"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/brown">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/list_food"
+                    android:id="@+id/textView30"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="13dp"
+                    android:text="&lt;&lt; ดูข้อมูลย้อนหลัง"
+                    android:id="@+id/button"
+                    android:textSize="10sp"
+                    android:background="@android:color/black"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/brown"
+                    android:backgroundTintMode="src_atop"
+                    android:onClick="onHisFoodClick" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/re_listfood"
+                    android:id="@+id/textView42"
+                    android:layout_weight="2.5"
+                    android:textStyle="bold|italic"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/re_num"
+                    android:id="@+id/textView43"
+                    android:layout_weight="0.8"
+                    android:textStyle="bold|italic"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/re_cal"
+                    android:id="@+id/textView44"
+                    android:layout_weight="0.7"
+                    android:textStyle="bold|italic"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="right"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView3"
+                android:layout_weight="1"
+                android:layout_marginBottom="3dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/brown">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/list_burn"
+                    android:id="@+id/textView31"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="13dp"
+                    android:text="&lt;&lt; ดูข้อมูลย้อนหลัง"
+                    android:id="@+id/button2"
+                    android:textSize="10sp"
+                    android:background="@android:color/black"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/brown"
+                    android:backgroundTintMode="src_atop"
+                    android:onClick="clickToHisActivityData" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/re_listactivity"
+                    android:id="@+id/textView46"
+                    android:layout_weight="2.5"
+                    android:textStyle="bold|italic"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/re_time"
+                    android:id="@+id/textView47"
+                    android:layout_weight="0.8"
+                    android:textStyle="bold|italic"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/re_cal"
+                    android:id="@+id/textView48"
+                    android:layout_weight="0.7"
+                    android:textStyle="bold|italic"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="right"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView4"
+                android:layout_weight="1"
+                android:layout_marginBottom="3dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tips"
+            android:id="@+id/textView89"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+</RelativeLayout>
