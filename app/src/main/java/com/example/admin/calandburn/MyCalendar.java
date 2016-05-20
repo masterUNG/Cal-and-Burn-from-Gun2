@@ -2,6 +2,7 @@ package com.example.admin.calandburn;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -107,7 +108,9 @@ public class MyCalendar extends AppCompatActivity {
 
         }
 
-
+        Intent intent = new Intent(MyCalendar.this, SevenDay.class);
+        intent.putExtra("ResultDate", dateResultStrings);
+        startActivity(intent);
 
 
     }   // setup

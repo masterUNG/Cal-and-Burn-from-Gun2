@@ -58,7 +58,8 @@
         <activity android:name=".SearchExercise" />
         <activity android:name=".HisActivityData" />
         <activity android:name=".ShowDateHisActivity" />
-        <activity android:name=".MyCalendar"></activity>
+        <activity android:name=".MyCalendar" />
+        <activity android:name=".SevenDay"></activity>
     </application>
 
 </manifest>
