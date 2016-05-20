@@ -1,5 +1,7 @@
 package com.example.admin.calandburn;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -66,7 +68,32 @@ public class MyCalendar extends AppCompatActivity {
         Log.d("20MayV1", "dateStart ==> " + dateStartString);
         Log.d("20MayV1", "dateEnd ==> " + dateEndString);
 
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setIcon(R.drawable.icon_myaccount);
+        builder.setCancelable(false);
+        builder.setTitle("Confirm Date");
+        builder.setMessage("Start ==> " + dateStartString + "\n" +
+                "End ==> " + dateEndString);
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                setupForIntent(dateStartString, dateEndString);
+                dialogInterface.dismiss();
+            }
+        });
+        builder.show();
+
 
     }   // confirmDate
+
+    private void setupForIntent(String dateStartString, String dateEndString) {
+
+    }
 
 }   // Main Class
