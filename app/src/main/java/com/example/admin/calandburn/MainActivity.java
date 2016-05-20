@@ -9,13 +9,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity
-         {
+public class MainActivity extends AppCompatActivity {
 
     //Explicit
     private UserTABLE objUserTABLE;
@@ -32,9 +30,11 @@ public class MainActivity extends AppCompatActivity
         //Check userTABLE
         checkUserTABLE();
 
-
-
     } //onCreate
+
+    public void clickCalendar(View view) {
+        startActivity(new Intent(MainActivity.this, MyCalendar.class));
+    }
 
     @Override
     protected void onRestart() {
@@ -61,12 +61,13 @@ public class MainActivity extends AppCompatActivity
         }
 
     }   // checkUserTABLe
-             
+
 
     public void clickToProfile(View view) {
         Intent toProfileIntent = new Intent(this, ProfileActivity.class);
         startActivity(toProfileIntent);
     }
+
     public void clickToInformation(View view) {
         Intent i = new Intent(this, Information.class);
         startActivity(i);
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity
         Cursor burnReportCursor = objSqLiteDatabase.rawQuery("SELECT * FROM burn_table", null);
         Cursor calaryDateReportCursor = objSqLiteDatabase.rawQuery("SELECT * FROM calary_table WHERE Date = '" + formattedDate + "'", null);
         Cursor burnDateReportCursor = objSqLiteDatabase.rawQuery("SELECT * FROM burn_table WHERE Date = '" + formattedDate + "'", null);
-        if (calaryReportCursor.getCount() <= 0&&burnReportCursor.getCount() <= 0) {
+        if (calaryReportCursor.getCount() <= 0 && burnReportCursor.getCount() <= 0) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("ไม่มีรายการที่กระทำในขณะนี้");
             builder.setCancelable(false);
@@ -104,8 +105,7 @@ public class MainActivity extends AppCompatActivity
                 }
             });
             builder.show();
-        }
-        else if(calaryDateReportCursor.getCount() <= 0&&burnDateReportCursor.getCount() <= 0){
+        } else if (calaryDateReportCursor.getCount() <= 0 && burnDateReportCursor.getCount() <= 0) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("ไม่มีรายการที่กระทำในวันนี้");
             builder.setCancelable(false);
@@ -115,14 +115,14 @@ public class MainActivity extends AppCompatActivity
                     dialog.dismiss();
                 }
             });
-            builder.show();}
-        else if(((calaryDateReportCursor.getCount() <= 0)&&(burnDateReportCursor.getCount() >0))||((calaryDateReportCursor.getCount() <= 0)&&(burnDateReportCursor.getCount() >0))){
+            builder.show();
+        } else if (((calaryDateReportCursor.getCount() <= 0) && (burnDateReportCursor.getCount() > 0)) || ((calaryDateReportCursor.getCount() <= 0) && (burnDateReportCursor.getCount() > 0))) {
             Intent r = new Intent(getApplicationContext(), ReportActivity.class);
-            startActivity(r);}
-        else  {
+            startActivity(r);
+        } else {
             Intent ToReportIntent = new Intent(this, ReportActivity.class);
             startActivity(ToReportIntent);
         }
-        }   // รายงาน
+    }   // รายงาน
 
 } // MainClass

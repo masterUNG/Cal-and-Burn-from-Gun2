@@ -7,16 +7,18 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".SplashScreen" android:screenOrientation="portrait">
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MainActivity" android:screenOrientation="portrait"/>
-
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile" />
@@ -39,20 +41,24 @@
         <activity android:name=".EditProfile" />
         <activity android:name=".InfoBMI" />
         <activity android:name=".HisFoodData" />
-        <activity android:name=".SearchFood" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SearchFood"
+            android:screenOrientation="portrait" />
         <activity android:name=".SelectCakeFood" />
         <activity android:name=".SearchShowFood" />
         <activity android:name=".infoBMR" />
         <activity android:name=".listviewShowSearch" />
         <activity android:name=".ShowDateHisFood" />
         <activity android:name=".SelectDrinkFood" />
-        <activity android:name=".SearchActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SearchActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".SearchNameFood" />
         <activity android:name=".SearchNameActivity" />
         <activity android:name=".SearchExercise" />
         <activity android:name=".HisActivityData" />
         <activity android:name=".ShowDateHisActivity" />
-
+        <activity android:name=".MyCalendar"></activity>
     </application>
 
 </manifest>
