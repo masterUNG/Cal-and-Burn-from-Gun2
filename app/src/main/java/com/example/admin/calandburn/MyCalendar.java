@@ -94,6 +94,22 @@ public class MyCalendar extends AppCompatActivity {
 
     private void setupForIntent(String dateStartString, String dateEndString) {
 
-    }
+        String[] dateResultStrings = new String[7];
+        String[] timeStart = dateStartString.split("/");
+        int intTimes = Integer.parseInt(timeStart[2]);
+
+        for (int i=0;i<7;i++) {
+            dateResultStrings[i] = timeStart[0] + "/" + timeStart[1] + "/" +
+                    Integer.toString(intTimes);
+            intTimes += 1;
+
+            Log.d("20MayV1", "dateResultString " + i + " ==>  " + dateResultStrings[i]);
+
+        }
+
+
+
+
+    }   // setup
 
 }   // Main Class
