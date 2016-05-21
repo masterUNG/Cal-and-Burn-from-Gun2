@@ -3,14 +3,9 @@ package com.example.admin.calandburn;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
 import android.text.InputType;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -19,8 +14,6 @@ import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 
 public class CalActivity extends AppCompatActivity {
@@ -61,7 +54,7 @@ public class CalActivity extends AppCompatActivity {
         int[] intIcon = new int[strIcon.length];
         for (int i = 0; i < strIcon.length; i++) {
 
-                intIcon[i] = R.drawable.food1;
+            intIcon[i] = R.drawable.food1;
 
         }   //for
 
@@ -91,7 +84,7 @@ public class CalActivity extends AppCompatActivity {
         objEditText.setInputType(InputType.TYPE_CLASS_NUMBER);
         objBuilder.setIcon(R.drawable.food);
         objBuilder.setTitle("วันที่ " + strDate);
-        objBuilder.setMessage(strFood + "\n\n" + " 1 หน่วย" + " = " + strFactor +" calorie" +"\n"
+        objBuilder.setMessage(strFood + "\n\n" + " 1 หน่วย" + " = " + strFactor + " calorie" + "\n"
                 + "ใส่จำนวนบริโภค :");
 
         objBuilder.setView(objEditText);
@@ -103,8 +96,8 @@ public class CalActivity extends AppCompatActivity {
                 try {
 
                     String strAmount = objEditText.getText().toString().trim();
-                    int intAmount= Integer.parseInt(strAmount);
-                    if (intAmount <=0) {
+                    int intAmount = Integer.parseInt(strAmount);
+                    if (intAmount <= 0) {
                         Toast.makeText(CalActivity.this, "กรุณาระบุจำนวนที่มากกว่า 0", Toast.LENGTH_SHORT).show();
                     } else {
                         confirmAlertDialog(strDate, strFood, strFactor, strAmount);
