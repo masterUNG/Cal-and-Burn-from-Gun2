@@ -100,7 +100,7 @@ public class MyCalendar extends AppCompatActivity {
         int intTimes = Integer.parseInt(timeStart[2]);
 
         for (int i=0;i<7;i++) {
-            dateResultStrings[i] = timeStart[0] + "/" + timeStart[1] + "/" +
+            dateResultStrings[i] = timeStart[0] + "/" + "0" + timeStart[1] + "/" +
                     Integer.toString(intTimes);
             intTimes += 1;
 

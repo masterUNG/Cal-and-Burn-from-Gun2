@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 
-public class MyShowAct extends BaseAdapter{
+public class SevenAdapter extends BaseAdapter{
 
     //Explicit
     private Context objContext;
@@ -16,7 +16,11 @@ public class MyShowAct extends BaseAdapter{
     private int[] iconInts;
 
 
-    public MyShowAct(Context objContext, String[] nameCalStrings, String[] dateStrings, String[] numCalString, String[] CalString) {
+    public SevenAdapter(Context objContext,
+                        String[] nameCalStrings,
+                        String[] dateStrings,
+                        String[] numCalString,
+                        String[] CalString) {
         this.objContext = objContext;
         this.nameCalStrings = nameCalStrings;
         this.dateStrings = dateStrings;
@@ -45,18 +49,19 @@ public class MyShowAct extends BaseAdapter{
     public View getView(int i, View view, ViewGroup viewGroup) {
 
         LayoutInflater objLayoutInflater = (LayoutInflater) objContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View objView1 = objLayoutInflater.inflate(R.layout.my_listshow, viewGroup, false);
+        View objView1 = objLayoutInflater.inflate(R.layout.seven_listview, viewGroup, false);
 
         //Setup Title
-        TextView nameTextView = (TextView) objView1.findViewById(R.id.namelist);
+        TextView dateTextView = (TextView) objView1.findViewById(R.id.textView95);
+        dateTextView.setText(dateStrings[i]);
+
+        TextView nameTextView = (TextView) objView1.findViewById(R.id.namelist1);
         nameTextView.setText(nameCalStrings[i]);
 
-
-
-        TextView numTextView = (TextView) objView1.findViewById(R.id.numlist);
+        TextView numTextView = (TextView) objView1.findViewById(R.id.numlist1);
         numTextView.setText(numCalString[i]);
 
-        TextView calTextView = (TextView) objView1.findViewById(R.id.callist);
+        TextView calTextView = (TextView) objView1.findViewById(R.id.callist1);
         calTextView.setText(CalString[i]);
 
 
